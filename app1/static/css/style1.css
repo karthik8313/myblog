@@ -1,0 +1,39 @@
+html{
+    background-color: #ffffff;
+}
+body{
+    width:1200px;
+    margin: auto;
+}
+.sidebar {
+    width: 85px; 
+    float: left;
+    position: fixed;
+}
+.sidebar a {
+    background-color: #ffffff; 
+    color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; 
+}
+.sidebar a:hover {
+    background-color: #048ef7; 
+}
+.sidebar a.active {
+    background-color: #00bbff;
+    color: white;
+}
+.sidebar img{
+	padding: 5px;
+}
+.author{
+    float: left;
+    width: 1000px;
+    padding-left: 100px;
+}
+.author p{
+    font-size: 15px;
+    font-style: italic;
+    color: blue;
+}

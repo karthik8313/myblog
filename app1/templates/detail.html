@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+<title>My Blog</title>
+<div class="sidebar">
+    <a href='home'><img src="\media\images\logo.png"width=35px,height=25px>Home</a>
+    <a href=""><img src="\media\images\search.png"width=35px,height=25px>Search</a>
+    <a href="#"><img src="\media\images\menu.png"width=35px,height=25px>Menu</a>
+    <a href="#"><img src="\media\images\about.png"width=35px,height=25px>About</a>
+    <a href="#"><img src="\media\images\contact.png"width=35px,height=25px>Contact</a>
+</div>
+</head>
+<body>
+    <div class="author">
+    <h1>{{ blogpost.title }}</h1>
+    <p><b>Author</b>:{{blogpost.author}}&nbsp;  | &nbsp;  <b>Date</b>:{{blogpost.publication}}</p>
+    <hr>
+    <img src="{{blogpost.hero.url}}">
+    {{blogpost.body }}<hr>
+    <img src="{{blogpost.image.url}}"><hr>
+
+</div>
+</body>
+
+</html>

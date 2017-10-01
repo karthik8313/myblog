@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<title>My Blog</title>
+<div class="sidebar">
+    <a href='home'><img src="\media\images\logo.png"width=35px,height=25px>Home</a>
+    <a href="#"><img src="\media\images\search.png"width=35px,height=25px>Search</a>
+    <a href="#"><img src="\media\images\menu.png"width=35px,height=25px>Menu</a>
+    <a href="#"><img src="\media\images\about.png"width=35px,height=25px>About</a>
+    <a href="#"><img src="\media\images\contact.png"width=35px,height=25px>Contact</a>
+</div>
+</head>
+<body>
+    <div class="container">
+<h1>Indian Cricket Players</h1>
+{% for i in post %}
+    <p style="text-align:justify">
+    <h3><a href="{{ i.id }}">{{ i.title }}</a><br></h3>
+    <img src="{{i.hero.url}}"><br>
+    {{i.body |truncatewords:"50"}} <br>
+    <a href="{{ i.id }}">Continue Reading</a><hr>
+</p>
+{% endfor %}
+
+
+</div>
+</body>
+
+</html>
